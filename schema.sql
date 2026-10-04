@@ -1,0 +1,10 @@
+CREATE DATABASE IF NOT EXISTS kisi_yonetici CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE kisi_yonetici;
+
+CREATE TABLE IF NOT EXISTS kisiler (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    ad_soyad VARCHAR(120) NOT NULL,
+    email VARCHAR(150) NOT NULL UNIQUE,
+    telefon VARCHAR(30),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
